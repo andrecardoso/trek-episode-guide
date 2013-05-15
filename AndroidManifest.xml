@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2013 AppGlu, Inc.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.appglu.trekepisodeguide"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17"/>
+    
+    <supports-screens
+        android:smallScreens="false"
+        android:normalScreens="true" 
+        android:largeScreens="true" 
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+    <!-- App receives GCM messages. -->
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	
+	<!-- Creates a custom permission so only this app can receive its messages. -->
+	<permission android:name="com.appglu.trekepisodeguide.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="com.appglu.trekepisodeguide.permission.C2D_MESSAGE" />
+	
+	<!-- GCM requires a Google account. -->
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<!-- Keeps the processor from sleeping when a message is received. -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/icon"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:name=".TrekApplication">
+            
+        <activity android:name=".ui.HomeActivity" android:theme="@style/AppTheme.NoTitleBar" android:clearTaskOnLaunch="true">
+            <intent-filter android:label="@string/app_name_shortcut">
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".ui.SplashActivity" android:theme="@style/AppTheme.NoTitleBar" android:noHistory="true" />
+        <activity android:name=".ui.list.EpisodeListActivity" />
+        <activity android:name=".ui.detail.EpisodeDetailActivity" />
+        
+        <activity android:name=".ui.gallery.ImageGalleryActivity" android:theme="@style/AppTheme.NoTitleBar" />
+
+        <!-- AppGlu Sync Service -->
+        <service android:name="com.appglu.android.sync.SyncIntentService" />
+        
+        <!-- GCM broadcast receiver -->
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.appglu.trekepisodeguide" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- GCM intent service -->
+        <service android:name=".GCMIntentService" /> 
+
+    </application>
+
+</manifest>

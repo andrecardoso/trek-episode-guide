@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2013 AppGlu, Inc.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/gallery_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/top_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="3dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="3dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:onClick="onOverlayClick"
+        android:soundEffectsEnabled="false">
+
+        <com.appglu.trekepisodeguide.ui.view.TrekButton
+            android:id="@+id/close_button"
+            android:layout_width="65dip"
+            android:layout_height="35dip"
+            android:background="@drawable/close_button_selector"
+            android:gravity="right|bottom"
+            android:paddingRight="5dp"
+            android:includeFontPadding="false"
+            android:onClick="onCloseButtonClick"
+            android:text="@string/close"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1"
+            android:src="@color/purple"
+            tools:ignore="ContentDescription" />
+
+        <com.appglu.trekepisodeguide.ui.view.TrekTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:includeFontPadding="false"
+            android:text="@string/images"
+            android:textColor="@android:color/white"
+            android:textSize="42dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/sliding_overlay_top_right_rounded_block"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="3dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:onClick="onOverlayClick"
+        android:soundEffectsEnabled="false">
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="35dip"
+            android:src="@drawable/sliding_overlay_bottom_left_rounded_block"
+            tools:ignore="ContentDescription" />
+
+        <com.appglu.trekepisodeguide.ui.view.TrekTextView
+            android:id="@+id/image_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/white"
+            android:textSize="42dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:src="@color/light_purple"
+            tools:ignore="ContentDescription" />
+
+        <com.appglu.trekepisodeguide.ui.view.TrekButton
+            android:id="@+id/previous_button"
+            android:layout_width="75dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/previous_button_selector"
+            android:includeFontPadding="false"
+            android:onClick="onPreviousClick"
+            android:gravity="right|bottom"
+            android:paddingRight="5dp"
+            android:text="@string/previous"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            tools:ignore="SpUsage" />
+
+        <com.appglu.trekepisodeguide.ui.view.TrekButton
+            android:id="@+id/next_button"
+            android:layout_width="60dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/next_button_selector"
+            android:includeFontPadding="false"
+            android:gravity="left|bottom"
+            android:paddingLeft="5dp"
+            android:onClick="onNextClick"
+            android:text="@string/next"
+            android:textColor="@android:color/black"
+            android:textSize="25dp"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2013 AppGlu, Inc.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+    <RelativeLayout
+		android:id="@+id/thumbnail_layout" 
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/list_item_margin_left"
+		android:layout_marginRight="@dimen/list_item_margin_right">
+    
+		<ImageView
+	         android:id="@+id/progress"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:scaleType="centerCrop"
+	         android:src="@drawable/placeholder_large"
+	         android:contentDescription="@string/thumbnail_description" />
+		
+		<ImageView
+	         android:id="@+id/placeholder"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:scaleType="centerCrop"
+	         android:src="@drawable/image_not_available_large"
+	         android:contentDescription="@string/thumbnail_description" />
+		
+		<ImageView
+	         android:id="@+id/image"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:scaleType="fitXY"
+	         android:contentDescription="@string/thumbnail_description" />
+	
+	</RelativeLayout>
+	
+	<LinearLayout
+		android:id="@+id/title_background"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/title"
+		android:layout_alignBottom="@+id/title"
+		android:layout_alignRight="@+id/title"
+		android:layout_alignTop="@+id/title"
+		android:background="@android:color/black"
+		android:alpha="0.6" />
+	
+	<com.appglu.trekepisodeguide.ui.view.TrekTextView
+		android:id="@+id/title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/thumbnail_layout"
+		android:layout_alignBottom="@+id/thumbnail_layout"
+		android:layout_alignRight="@+id/thumbnail_layout"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:ellipsize="end"
+		android:lines="2"
+		android:minLines="1"
+		android:textSize="32sp"
+		android:textColor="@android:color/white" />
+	
+	<LinearLayout
+		android:layout_width="5dp"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf="@+id/title_background"
+		android:layout_alignTop="@+id/thumbnail_layout"
+		android:layout_alignBottom="@+id/thumbnail_layout"
+		android:background="@drawable/list_item_selector" />
+    
+    <LinearLayout
+		android:layout_width="5dp"
+		android:layout_height="match_parent"
+		android:layout_alignTop="@+id/thumbnail_layout"
+		android:layout_alignBottom="@+id/thumbnail_layout"
+		android:layout_toRightOf="@+id/title_background"
+		android:background="@drawable/list_item_selector" />
+	
+	<com.appglu.trekepisodeguide.ui.view.TrekTextView
+		android:id="@+id/bubble"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/thumbnail_layout"
+		android:layout_alignTop="@+id/thumbnail_layout"
+		android:layout_marginTop="15dp"
+		android:layout_marginLeft="-15dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:textSize="20sp"
+		android:textColor="@android:color/black" />
+	
+</RelativeLayout>

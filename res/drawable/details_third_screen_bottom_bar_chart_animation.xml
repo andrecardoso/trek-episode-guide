@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2013 AppGlu, Inc.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart00" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart01" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart02" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart03" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart04" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart05" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart06" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart07" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart08" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart09" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart10" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart11" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart12" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart13" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart14" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart15" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart16" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart17" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart18" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart19" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart20" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart21" android:duration="@integer/animation_fast_duration" />
+   	<item android:drawable="@drawable/details_third_screen_bottom_bar_chart22" android:duration="@integer/animation_fast_duration" />
+</animation-list>
