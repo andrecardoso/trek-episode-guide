@@ -17,7 +17,7 @@ Follow the steps below to get the app running:
 
 The app should automatically synchronize with AppGlu at startup. Content changes you make in AppGlu will get automatically synchronized everytime the app is launched. Analytics are captured and submitted to AppGlu everytime the app closes. The app also registers at GCM (Google Cloud Message) to receive push notifications.
 
-Below we highlight the integration points between the app and the AppGlu SDK. For more information check out the [Android SDK Integration Guide](https://github.com/appglu/appglu-androidsdk/wiki/Android-SDK-Integration-Guide), the SDK reference [Javadocs](http://appglu.github.com/appglu-androidsdk/javadoc/index.html), or the [AppGlu Documentation Page](http://docs.appglu.com).
+Below we highlight the integration points between the app and the AppGlu SDK. For more information check out the [Android SDK Integration Guide](https://github.com/appglu/appglu-androidsdk/wiki/Android-SDK-Integration-Guide), the SDK reference [Javadocs](http://appglu.github.com/appglu-androidsdk/javadoc/1.0.0/index.html), or the [AppGlu Documentation Page](http://docs.appglu.com).
 
 ### Content synchronization  
 
