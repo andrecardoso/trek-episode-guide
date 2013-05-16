@@ -15,9 +15,15 @@ Follow the steps below to get the app running:
     2. Replace the API key/secret placeholders with the information of your own private AppGlu environment.
 4. Run the app in a device or emulator.
 
-The app should automatically synchronize with AppGlu at startup. Content changes you make in AppGlu will get automatically synchronized everytime the app is launched. Analytics are captured and submitted to AppGlu everytime the app closes. The app also registers at GCM (Google Cloud Message) to receive push notifications.
+The app should automatically synchronize with AppGlu at startup. Content changes you make in AppGlu will get automatically synchronized everytime the app is launched. Analytics are captured and submitted to AppGlu everytime the app closes. The app also registers at GCM (Google Cloud Message) to receive push notifications. You can experiment sending notification messages to your own devices after you have it integrated with your instance of the Trek AppGlu demo environment. 
 
 Below we highlight the integration points between the app and the AppGlu SDK. For more information check out the [Android SDK Integration Guide](https://github.com/appglu/appglu-androidsdk/wiki/Android-SDK-Integration-Guide), the SDK reference [Javadocs](http://appglu.github.com/appglu-androidsdk/javadoc/index.html), or the [AppGlu Documentation Page](http://docs.appglu.com).
+
+### SDK initialization
+
+The SDK is initialized in the `onCreate()` method of the `TrekApplication` class (application main class). There we setup the API key and secret (which is read from the XML file mentioned above) and also provide an instance of the `DatabaseHelper` that is used to configure the database.  
+
+The `TrekDatabaseHelper` is a subclass of `SyncDatabaseHelper`, which in turn is a subclass of `SQLiteOpenHelper` that developers are familiar with when using SQLite databases. The subclass of `SyncDatabaseHelper` is very similar to subclasses of `SQLiteOpenHelper`, the only exception is that the `onCreate()` method is called `onCreateAppDatabase()` and the `onUpgrade()` method is called `onUpgradeAppDatabase()`.
 
 ### Content synchronization  
 
